@@ -30,7 +30,7 @@ namespace AASDSearch.Search
                     var bingContainer = new Bing.BingSearchContainer(new Uri(rootUrl));
 
                     // The market to use.
-                    string market = "en-us";
+                    string market = pSearchrequest.Language;
 
                     // Configure bingContainer to use your credentials.
                     bingContainer.Credentials = new NetworkCredential(AccountKey, AccountKey);
@@ -45,8 +45,14 @@ namespace AASDSearch.Search
 
                     foreach (var result in webResults)
                     {
-                        Console.WriteLine("{0}\n\t{1}", result.Title, result.Url);
-                        Console.ReadKey();
+                        AASDSearch.Common.CSearchResult searchresult = new AASDSearch.Common.CSearchResult();
+                        searchresult.Title = result.Title;
+                        searchresult.Type = Common.SearchResulttype.Web;
+                        searchresult.Description = result.Description;
+                        searchresult.ID = result.ID;
+                        searchresult.Url = result.Url;
+                        searchresult.DisplayUrl = result.DisplayUrl;
+                        pSearchrequest.SearchResults.Add(searchresult);
                     }
                 }
                 catch (Exception ex)
@@ -54,7 +60,7 @@ namespace AASDSearch.Search
                     string innerMessage =
                         (ex.InnerException != null) ?
                         ex.InnerException.Message : String.Empty;
-                    Console.WriteLine("{0}\n{1}", ex.Message, innerMessage);
+                    pSearchrequest.ErrorMsg = string.Format("{0}\n{1}", ex.Message, innerMessage);
                 }
             });
         }

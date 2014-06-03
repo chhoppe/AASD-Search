@@ -10,6 +10,10 @@ namespace AASDSearch.Common
     {
         protected string _searchString;
         protected string _language;
+        protected bool _gotError;
+        protected string _errorMsg;
+        protected List<CSearchResult> _searchResults;
+
 
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
 
@@ -38,12 +42,40 @@ namespace AASDSearch.Common
                 OnPropertyChanged("Language");
             }
         }
+        public string ErrorMsg
+        {
+            get { return _errorMsg; }
+
+            set
+            {
+                _errorMsg = value;
+                OnPropertyChanged("ErrorMsg");
+            }
+        }
+        public bool GotError
+        {
+            get { return _gotError; }
+
+            set
+            {
+                _gotError = value;
+                OnPropertyChanged("GotError");
+            }
+        }
+        public List<CSearchResult> SearchResults
+        {
+            get { return _searchResults; }
+        }
         #endregion Properties
         #region Private methods
         private void loadDefaultSetting()
         {
-            _language = "de-de";
+            _language = "en-us";
             _searchString = "";
+            if (_searchResults == null)
+                _searchResults = new List<CSearchResult>();
+            else
+                _searchResults.Clear();
         }
         #endregion Private methods
         public void OnPropertyChanged(string name)
