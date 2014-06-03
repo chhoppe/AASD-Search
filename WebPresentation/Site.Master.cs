@@ -6,7 +6,7 @@ using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace WebPresentation
+namespace AASDSearch.Web
 {
     public partial class SiteMaster : MasterPage
     {

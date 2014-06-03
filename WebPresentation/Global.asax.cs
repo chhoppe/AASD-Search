@@ -7,7 +7,7 @@ using System.Web.Routing;
 using System.Web.Security;
 using WebPresentation;
 
-namespace WebPresentation
+namespace AASDSearch.Web
 {
     public class Global : HttpApplication
     {
