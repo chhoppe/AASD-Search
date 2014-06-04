@@ -40,22 +40,22 @@ namespace AASDSearch.Web {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// txtSearch-Steuerelement
+        /// TextBoxSearch-Steuerelement
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
         /// Um dies zu ändern, verschieben Sie die Felddeklaration aus der Designerdatei in eine Code-Behind-Datei.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSearch;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxSearch;
         
         /// <summary>
-        /// Button1-Steuerelement
+        /// ButtonSearch-Steuerelement
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
         /// Um dies zu ändern, verschieben Sie die Felddeklaration aus der Designerdatei in eine Code-Behind-Datei.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button ButtonSearch;
         
         /// <summary>
         /// GridViewSearchResult-Steuerelement

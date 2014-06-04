@@ -14,12 +14,14 @@ namespace AASDSearch.Web
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void ButtonSearch_Click (object sender, EventArgs e)
         {
             Common.CSearchRequest request = new Common.CSearchRequest();
+            request.SearchString = TextBoxSearch.Text;
+
             
             //var objBing = new Bing.BingSearchContainer(new Uri("https://api.datamarket.azure.com/Bing/Search"));
-            var accountKey = "qsqVDvegggbvRRe72aAz85mCfXdlvMLf6B3yVMYauFk";
+            //var accountKey = "qsqVDvegggbvRRe72aAz85mCfXdlvMLf6B3yVMYauFk";
             //objBing.Credentials = new System.Net.NetworkCredential(accountKey, accountKey);
             //var webResult = objBing.Web(txtSearch.Text.ToString(), null, null, null, null, null, null, null);
             //GridViewSearchResult.DataSource = webResult;

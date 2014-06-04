@@ -20,9 +20,9 @@
                 <td width="80px">
                     &nbsp;</td>
                 <td height="40px">
-                    <asp:TextBox ID="txtSearch" runat="server" Height="30px" Width="639px"></asp:TextBox>
-                    <asp:Button ID="Button1" runat="server" Font-Bold="True" Font-Names="Georgia"
-                        Height="30px" Text="Search" Width="65px" onclick="Button1_Click" />
+                    <asp:TextBox ID="TextBoxSearch" runat="server" Height="30px" Width="639px"></asp:TextBox>
+                    <asp:Button ID="ButtonSearch" runat="server" Font-Bold="True" Font-Names="Georgia"
+                        Height="30px" Text="Search" Width="65px" onclick="ButtonSearch_Click" />
                 </td>
             </tr>
             <tr>
