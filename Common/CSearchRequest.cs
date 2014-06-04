@@ -21,6 +21,13 @@ namespace AASDSearch.Common
         {
             loadDefaultSetting();  
         }
+
+        public CSearchRequest(string searchstring, string language)
+        {
+            SearchString = searchstring;
+            Language = language;
+        }
+
         #region Properties
         public string SearchString 
         {
