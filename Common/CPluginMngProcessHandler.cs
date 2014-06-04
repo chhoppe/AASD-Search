@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AASDSearch.Common
 {
-    private class CPluginMngProcessHandler<T>
+    class CPluginMngProcessHandler<T>
     {
         public CSearchRequest request;
         public List<T> plugins;
