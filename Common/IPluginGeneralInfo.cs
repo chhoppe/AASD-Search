@@ -12,6 +12,6 @@ namespace AASDSearch.Common
         {
             get;
         }
-        async void processAsync (AASDSearch.Common.CSearchRequest pSearchrequest);
+        void processAsync (AASDSearch.Common.CSearchRequest pSearchrequest);
     }
 }
