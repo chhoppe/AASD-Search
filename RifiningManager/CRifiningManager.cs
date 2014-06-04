@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AASDSearch.Rifining
 {
-    public class CRifiningManager : AASDSearch.Common.CPluginManagerBasis
+    public class CRifiningManager : AASDSearch.Common.CPluginManagerBasis<IRifiningPlugin>
     {
     }
 }

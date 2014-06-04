@@ -12,6 +12,7 @@ namespace AASDSearch.Common
         protected string _language;
         protected bool _gotError;
         protected string _errorMsg;
+        protected Guid _UserID;
         protected List<CSearchResult> _searchResults;
 
 
@@ -48,7 +49,7 @@ namespace AASDSearch.Common
 
             set
             {
-                _errorMsg = value;
+                _errorMsg = String.Format("{0}{1}{2}", value, Environment.NewLine, _errorMsg);
                 OnPropertyChanged("ErrorMsg");
             }
         }
@@ -60,6 +61,16 @@ namespace AASDSearch.Common
             {
                 _gotError = value;
                 OnPropertyChanged("GotError");
+            }
+        }
+        public Guid UserID
+        {
+            get { return _UserID; }
+
+            set
+            {
+                _UserID = value;
+                OnPropertyChanged("UserID");
             }
         }
         public List<CSearchResult> SearchResults

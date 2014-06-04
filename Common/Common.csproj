@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CPluginManagerBasis.cs" />
+    <Compile Include="CPluginMngProcessHandler.cs" />
     <Compile Include="CSearchResult.cs" />
     <Compile Include="IPluginGeneralInfo.cs" />
     <Compile Include="CSearchRequest.cs" />
