@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace AASDSearch.Common
 {
+    /// <summary>
+    ///  help structure for plugin manager processing a searchrequest
+    /// </summary>
+    /// <typeparam name="T">specific plugin type</typeparam>
     class CPluginMngProcessHandler<T>
     {
         public CSearchRequest request;

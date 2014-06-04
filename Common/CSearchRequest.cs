@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace AASDSearch.Common
 {
+    /// <summary>
+    /// This is a Search Request, all settings, keywords, context and results of one search is handeled by it
+    /// </summary>
     public class CSearchRequest: System.ComponentModel.INotifyPropertyChanged
     {
         protected string _searchString;
@@ -15,21 +18,35 @@ namespace AASDSearch.Common
         protected Guid _UserID;
         protected List<CSearchResult> _searchResults;
 
-
+        /// <summary>
+        /// Event to signal a change in one of the properties
+        /// </summary>
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
 
+        /// <summary>
+        /// basic constructor
+        /// </summary>
         public CSearchRequest()
         {
             loadDefaultSetting();  
         }
 
+        /// <summary>
+        /// constructor which sets searchsting and language
+        /// </summary>
+        /// <param name="searchstring">searchstring containing keywords to search</param>
+        /// <param name="language">the language to search in</param>
         public CSearchRequest(string searchstring, string language)
+            : this()
         {
             SearchString = searchstring;
             Language = language;
         }
 
         #region Properties
+        /// <summary>
+        /// searchstring containing keywords to search for (user input)
+        /// </summary>
         public string SearchString 
         {
             get { return _searchString; }
@@ -40,6 +57,9 @@ namespace AASDSearch.Common
                 OnPropertyChanged("SearchString");
             }
         }
+        /// <summary>
+        /// the language to search in (get from user)
+        /// </summary>
         public string Language
         {
             get { return _language; }
@@ -50,6 +70,9 @@ namespace AASDSearch.Common
                 OnPropertyChanged("Language");
             }
         }
+        /// <summary>
+        /// errormessage when encountering an error somewhere
+        /// </summary>
         public string ErrorMsg
         {
             get { return _errorMsg; }
@@ -60,6 +83,9 @@ namespace AASDSearch.Common
                 OnPropertyChanged("ErrorMsg");
             }
         }
+        /// <summary>
+        /// Signal that an error occured
+        /// </summary>
         public bool GotError
         {
             get { return _gotError; }
@@ -70,6 +96,9 @@ namespace AASDSearch.Common
                 OnPropertyChanged("GotError");
             }
         }
+        /// <summary>
+        /// User ID of the user doing the search (not yet used)
+        /// </summary>
         public Guid UserID
         {
             get { return _UserID; }
@@ -80,12 +109,18 @@ namespace AASDSearch.Common
                 OnPropertyChanged("UserID");
             }
         }
+        /// <summary>
+        /// List of all Results for the search
+        /// </summary>
         public List<CSearchResult> SearchResults
         {
             get { return _searchResults; }
         }
         #endregion Properties
         #region Private methods
+        /// <summary>
+        /// load default settings, used after initializing
+        /// </summary>
         private void loadDefaultSetting()
         {
             _language = "en-us";
@@ -94,9 +129,15 @@ namespace AASDSearch.Common
                 _searchResults = new List<CSearchResult>();
             else
                 _searchResults.Clear();
+            _errorMsg = "";
+            _gotError = false;
         }
         #endregion Private methods
-        public void OnPropertyChanged(string name)
+        /// <summary>
+        /// Method to fire event if Property changes
+        /// </summary>
+        /// <param name="name"></param>
+        private void OnPropertyChanged(string name)
         {
             System.ComponentModel.PropertyChangedEventHandler handler = PropertyChanged;
             if (handler != null)
