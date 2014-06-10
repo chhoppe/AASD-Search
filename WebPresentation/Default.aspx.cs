@@ -19,7 +19,9 @@ namespace AASDSearch.Web
             Common.CSearchRequest request = new Common.CSearchRequest();
             request.SearchString = TextBoxSearch.Text;
 
-            
+            Global.RifiningManager.processAsync(request);
+            Global.SearchManager.processAsync(request);
+            Global.FilterManager.processAsync(request);
             //var objBing = new Bing.BingSearchContainer(new Uri("https://api.datamarket.azure.com/Bing/Search"));
             //var accountKey = "qsqVDvegggbvRRe72aAz85mCfXdlvMLf6B3yVMYauFk";
             //objBing.Credentials = new System.Net.NetworkCredential(accountKey, accountKey);
