@@ -17,6 +17,7 @@ namespace AASDSearch.Common
         public CPluginMngProcessHandler(CSearchRequest pSearchRequest)
         {
             request = pSearchRequest;
+            plugins = new List<T>();
         }
     }
 }
