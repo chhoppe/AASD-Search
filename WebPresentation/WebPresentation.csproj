@@ -351,13 +351,13 @@
       <Project>{5cc5cb52-0a9e-434d-befe-bb6feed8acd1}</Project>
       <Name>FilterPluginDummy</Name>
     </ProjectReference>
-    <ProjectReference Include="..\RifiningManager\RifiningManager.csproj">
+    <ProjectReference Include="..\RefiningManager\RefiningManager.csproj">
       <Project>{dc7ef35f-e700-4ad1-a410-6c78fe3d0837}</Project>
-      <Name>RifiningManager</Name>
+      <Name>RefiningManager</Name>
     </ProjectReference>
-    <ProjectReference Include="..\RifiningPluginDummy\RifiningPluginDummy.csproj">
+    <ProjectReference Include="..\RefiningPluginDummy\RefiningPluginDummy.csproj">
       <Project>{8cc88d02-3b11-4de7-825c-0b0775681bc9}</Project>
-      <Name>RifiningPluginDummy</Name>
+      <Name>RefiningPluginDummy</Name>
     </ProjectReference>
     <ProjectReference Include="..\SearchManager\SearchManager.csproj">
       <Project>{b8a77d23-5c25-4c09-8360-d1b5e62b8f55}</Project>

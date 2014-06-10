@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AASDSearch.Rifining
+namespace AASDSearch.Refining
 {
-    public class CRifiningManager : AASDSearch.Common.CPluginManagerBasis<IRifiningPlugin>
+    public class CRefiningManager : AASDSearch.Common.CPluginManagerBasis<IRefiningPlugin>
     {
     }
 }

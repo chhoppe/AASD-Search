@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AASDSearch.Rifining
+namespace AASDSearch.Refining
 {
-    public interface IRifiningPlugin : AASDSearch.Common.IPluginGeneralInfo
+    public interface IRefiningPlugin : AASDSearch.Common.IPluginGeneralInfo
     {
   
     }

@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AASDSearch.Rifining
+namespace AASDSearch.Refining
 {
-    public class CRifiningPluginDummy : AASDSearch.Rifining.IRifiningPlugin
+    public class CRefiningPluginDummy : AASDSearch.Refining.IRefiningPlugin
     {
         public string Name
         {
             get
             {
-                return "Rifining Dummy";
+                return "Refining Dummy";
             }
         }
         async public void processAsync (AASDSearch.Common.CSearchRequest pSearchrequest)

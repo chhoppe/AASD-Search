@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8CC88D02-3B11-4DE7-825C-0B0775681BC9}</ProjectGuid>
+    <ProjectGuid>{DC7EF35F-E700-4AD1-A410-6C78FE3D0837}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>AASDSearch.Rifining</RootNamespace>
-    <AssemblyName>RifiningPluginDummy</AssemblyName>
+    <AssemblyName>RifiningManager</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -39,17 +39,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CRifiningPluginDummy.cs" />
+    <Compile Include="CRefiningManager.cs" />
+    <Compile Include="IRefiningPlugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{daaf3641-c6b7-48dc-adac-48877a400230}</Project>
       <Name>Common %28Business Layer\Common\Common%29</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\RifiningManager\RifiningManager.csproj">
-      <Project>{dc7ef35f-e700-4ad1-a410-6c78fe3d0837}</Project>
-      <Name>RifiningManager</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

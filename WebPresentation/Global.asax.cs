@@ -11,7 +11,7 @@ namespace AASDSearch.Web
 {
     public class Global : HttpApplication
     {
-        public static AASDSearch.Rifining.CRifiningManager RifiningManager;
+        public static AASDSearch.Refining.CRefiningManager RefiningManager;
         public static AASDSearch.Search.CSearchManager SearchManager;
         public static AASDSearch.Filter.CFilterManager FilterManager;
 
@@ -19,9 +19,9 @@ namespace AASDSearch.Web
         void Application_Start(object sender, EventArgs e)
         {
             // Code, der beim Anwendungsstart ausgeführt wird
-            RifiningManager = new Rifining.CRifiningManager();
-            RifiningManager.registerPlugin(typeof(AASDSearch.Rifining.CRifiningPluginDummy));
-            RifiningManager.Lock();
+            RefiningManager = new Refining.CRefiningManager();
+            RefiningManager.registerPlugin(typeof(AASDSearch.Refining.CRefiningPluginDummy));
+            RefiningManager.Lock();
 
             SearchManager = new Search.CSearchManager();
             SearchManager.registerPlugin(typeof(AASDSearch.Search.CSearchPluginBing));

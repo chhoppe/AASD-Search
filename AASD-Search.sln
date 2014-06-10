@@ -21,15 +21,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilterManager", "FilterMana
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilterPluginDummy", "FilterPluginDummy\FilterPluginDummy.csproj", "{5CC5CB52-0A9E-434D-BEFE-BB6FEED8ACD1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RifiningManager", "RifiningManager\RifiningManager.csproj", "{DC7EF35F-E700-4AD1-A410-6C78FE3D0837}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RifiningPluginDummy", "RifiningPluginDummy\RifiningPluginDummy.csproj", "{8CC88D02-3B11-4DE7-825C-0B0775681BC9}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchManager", "SearchManager\SearchManager.csproj", "{B8A77D23-5C25-4C09-8360-D1B5E62B8F55}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchPluginBing", "SearchPluginBing\SearchPluginBing.csproj", "{40601843-5813-4306-98C9-64967520CB55}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebPresentation", "WebPresentation\WebPresentation.csproj", "{79AC93F6-473D-4E7B-BA52-6AD3929DBE6B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefiningManager", "RefiningManager\RefiningManager.csproj", "{DC7EF35F-E700-4AD1-A410-6C78FE3D0837}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefiningPluginDummy", "RefiningPluginDummy\RefiningPluginDummy.csproj", "{8CC88D02-3B11-4DE7-825C-0B0775681BC9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,14 +49,6 @@ Global
 		{5CC5CB52-0A9E-434D-BEFE-BB6FEED8ACD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5CC5CB52-0A9E-434D-BEFE-BB6FEED8ACD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5CC5CB52-0A9E-434D-BEFE-BB6FEED8ACD1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DC7EF35F-E700-4AD1-A410-6C78FE3D0837}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DC7EF35F-E700-4AD1-A410-6C78FE3D0837}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DC7EF35F-E700-4AD1-A410-6C78FE3D0837}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DC7EF35F-E700-4AD1-A410-6C78FE3D0837}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8CC88D02-3B11-4DE7-825C-0B0775681BC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8CC88D02-3B11-4DE7-825C-0B0775681BC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8CC88D02-3B11-4DE7-825C-0B0775681BC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8CC88D02-3B11-4DE7-825C-0B0775681BC9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B8A77D23-5C25-4C09-8360-D1B5E62B8F55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B8A77D23-5C25-4C09-8360-D1B5E62B8F55}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8A77D23-5C25-4C09-8360-D1B5E62B8F55}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -69,6 +61,14 @@ Global
 		{79AC93F6-473D-4E7B-BA52-6AD3929DBE6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79AC93F6-473D-4E7B-BA52-6AD3929DBE6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79AC93F6-473D-4E7B-BA52-6AD3929DBE6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC7EF35F-E700-4AD1-A410-6C78FE3D0837}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC7EF35F-E700-4AD1-A410-6C78FE3D0837}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC7EF35F-E700-4AD1-A410-6C78FE3D0837}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC7EF35F-E700-4AD1-A410-6C78FE3D0837}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CC88D02-3B11-4DE7-825C-0B0775681BC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CC88D02-3B11-4DE7-825C-0B0775681BC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CC88D02-3B11-4DE7-825C-0B0775681BC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CC88D02-3B11-4DE7-825C-0B0775681BC9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
