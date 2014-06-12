@@ -9,6 +9,7 @@ namespace AASDSearch.Web
 {
     public partial class _Default : Page
     {
+        Common.CSearchRequest request = new Common.CSearchRequest();
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -16,19 +17,18 @@ namespace AASDSearch.Web
 
         protected void ButtonSearch_Click (object sender, EventArgs e)
         {
-            Common.CSearchRequest request = new Common.CSearchRequest();
+            
             request.SearchString = TextBoxSearch.Text;
 
             Global.RefiningManager.processAsync(request);
             Global.SearchManager.processAsync(request);
             Global.FilterManager.processAsync(request);
-            //var objBing = new Bing.BingSearchContainer(new Uri("https://api.datamarket.azure.com/Bing/Search"));
-            //var accountKey = "qsqVDvegggbvRRe72aAz85mCfXdlvMLf6B3yVMYauFk";
-            //objBing.Credentials = new System.Net.NetworkCredential(accountKey, accountKey);
-            //var webResult = objBing.Web(txtSearch.Text.ToString(), null, null, null, null, null, null, null);
-            //GridViewSearchResult.DataSource = webResult;
-            //GridViewSearchResult.DataBind();
-
+            GridViewSearchResult.DataSource = request.SearchResults;
+            GridViewSearchResult.DataBind();              
+        }
+        protected void Button1_Click (object sender, EventArgs e)
+        {
+          
         }
     }
 }

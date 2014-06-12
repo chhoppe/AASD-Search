@@ -54,6 +54,7 @@ namespace AASDSearch.Search
                         searchresult.DisplayUrl = result.DisplayUrl;
                         pSearchrequest.SearchResults.Add(searchresult);
                     }
+
                 }
                 catch (Exception ex)
                 {
