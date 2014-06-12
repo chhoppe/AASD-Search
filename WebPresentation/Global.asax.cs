@@ -11,21 +11,14 @@ namespace AASDSearch.Web
 {
     public class Global : HttpApplication
     {
-        public static AASDSearch.Refining.CRefiningManager RefiningManager;
-        public static AASDSearch.Search.CSearchManager SearchManager;
-        public static AASDSearch.Filter.CFilterManager FilterManager;
+        public static AASDSearch.Refining.CRefiningManager RefiningManager =  new AASDSearch.Refining.CRefiningManager();
+        public static AASDSearch.Search.CSearchManager SearchManager = new AASDSearch.Search.CSearchManager();
+        public static AASDSearch.Filter.CFilterManager FilterManager = new AASDSearch.Filter.CFilterManager();
 
 
         void Application_Start(object sender, EventArgs e)
         {
             // Code, der beim Anwendungsstart ausgeführt wird
-            if (RefiningManager != null)
-                RefiningManager = new Refining.CRefiningManager();
-            if (SearchManager != null)
-                SearchManager = new Search.CSearchManager();
-            if (FilterManager != null)
-                FilterManager = new Filter.CFilterManager();
-
 
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             AuthConfig.RegisterOpenAuth();
