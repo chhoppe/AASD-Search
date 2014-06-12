@@ -25,6 +25,26 @@ namespace AASDSearch.Common
             _locked = false;
             _pluginList = new List<Type>();
             
+            // get list of all used assemblies
+            System.Reflection.Assembly[] assemblies = AppDomain.CurrentDomain.GetAssemblies();
+            
+            foreach (System.Reflection.Assembly assembly in assemblies)
+            {
+                if (!assembly.GlobalAssemblyCache && assembly.GetName().Name.Contains("Plugin"))
+                {
+                    //get list of types matching T namespace
+                    Type[] types = assembly.GetTypes().Where(type => String.Equals(type.Namespace, typeof(T).Namespace, StringComparison.Ordinal)).ToArray();
+
+                    foreach (Type singletype in types)
+                    {
+                        if (singletype is T)
+                            registerPlugin(singletype);
+                    }
+                }
+
+            }
+            _locked = true;
+
         }
 
         /// <summary>
@@ -38,7 +58,7 @@ namespace AASDSearch.Common
         /// register a Plugin for this Manager, can only be done before locking
         /// </summary>
         /// <param name="PluginType"></param>
-        public void registerPlugin(Type PluginType)
+        private void registerPlugin(Type PluginType)
         {
             if (!_locked)
             {

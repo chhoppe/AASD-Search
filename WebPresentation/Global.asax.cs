@@ -19,17 +19,12 @@ namespace AASDSearch.Web
         void Application_Start(object sender, EventArgs e)
         {
             // Code, der beim Anwendungsstart ausgeführt wird
-            RefiningManager = new Refining.CRefiningManager();
-            RefiningManager.registerPlugin(typeof(AASDSearch.Refining.CRefiningPluginDummy));
-            RefiningManager.Lock();
-
-            SearchManager = new Search.CSearchManager();
-            SearchManager.registerPlugin(typeof(AASDSearch.Search.CSearchPluginBing));
-            SearchManager.Lock();
-
-            FilterManager = new Filter.CFilterManager();
-            FilterManager.registerPlugin(typeof(AASDSearch.Filter.CFilterPluginDummy));
-            FilterManager.Lock();
+            if (RefiningManager != null)
+                RefiningManager = new Refining.CRefiningManager();
+            if (SearchManager != null)
+                SearchManager = new Search.CSearchManager();
+            if (FilterManager != null)
+                FilterManager = new Filter.CFilterManager();
 
 
             BundleConfig.RegisterBundles(BundleTable.Bundles);
