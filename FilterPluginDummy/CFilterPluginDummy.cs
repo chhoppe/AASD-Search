@@ -12,12 +12,10 @@ namespace AASDSearch.Filter
         {
             get { return "Filter Dummy";}
         }
-        async public void processAsync (AASDSearch.Common.CSearchRequest pSearchrequest)
+        public void process (AASDSearch.Common.CSearchRequest pSearchrequest)
         {
             // Dummy Filter does nothing
-            await Task.Run(() => {
-
-            });
+            
         }
 
     }

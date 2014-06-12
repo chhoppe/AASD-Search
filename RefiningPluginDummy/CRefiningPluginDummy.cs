@@ -15,13 +15,10 @@ namespace AASDSearch.Refining
                 return "Refining Dummy";
             }
         }
-        async public void processAsync (AASDSearch.Common.CSearchRequest pSearchrequest)
+        public void process (AASDSearch.Common.CSearchRequest pSearchrequest)
         {
             // Dummy Filter does nothing
-            await Task.Run(( ) =>
-            {
-                
-            });
+
         }
     }
 }

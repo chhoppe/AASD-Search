@@ -17,52 +17,49 @@ namespace AASDSearch.Search
                 return "Bing Search Engine";
             }
         }
-        async public void processAsync(AASDSearch.Common.CSearchRequest pSearchrequest)
+        public void process(AASDSearch.Common.CSearchRequest pSearchrequest)
         {
-            await Task.Run(() =>
+            try
             {
-                try
+                string query = pSearchrequest.SearchString;
+
+                // Create a Bing container.
+                string rootUrl = "https://api.datamarket.azure.com/Bing/Search";
+                var bingContainer = new Bing.BingSearchContainer(new Uri(rootUrl));
+
+                // The market to use.
+                string market = pSearchrequest.Language;
+
+                // Configure bingContainer to use your credentials.
+                bingContainer.Credentials = new NetworkCredential(AccountKey, AccountKey);
+
+                // Build the query, limiting to 10 results.
+                var webQuery =
+                    bingContainer.Web(query, null, null, market, null, null, null, null);
+                webQuery = webQuery.AddQueryOption("$top", 10);
+
+                // Run the query and display the results.
+                var webResults = webQuery.Execute();
+
+                foreach (var result in webResults)
                 {
-                    string query = pSearchrequest.SearchString;
-
-                    // Create a Bing container.
-                    string rootUrl = "https://api.datamarket.azure.com/Bing/Search";
-                    var bingContainer = new Bing.BingSearchContainer(new Uri(rootUrl));
-
-                    // The market to use.
-                    string market = pSearchrequest.Language;
-
-                    // Configure bingContainer to use your credentials.
-                    bingContainer.Credentials = new NetworkCredential(AccountKey, AccountKey);
-
-                    // Build the query, limiting to 10 results.
-                    var webQuery =
-                        bingContainer.Web(query, null, null, market, null, null, null, null);
-                    webQuery = webQuery.AddQueryOption("$top", 10);
-
-                    // Run the query and display the results.
-                    var webResults = webQuery.Execute();
-
-                    foreach (var result in webResults)
-                    {
-                        AASDSearch.Common.CSearchResult searchresult = new AASDSearch.Common.CSearchResult();
-                        searchresult.Title = result.Title;
-                        searchresult.Type = Common.SearchResulttype.Web;
-                        searchresult.Description = result.Description;
-                        searchresult.ID = result.ID;
-                        searchresult.Url = result.Url;
-                        searchresult.DisplayUrl = result.DisplayUrl;
-                        pSearchrequest.SearchResults.Add(searchresult);
-                    }
+                    AASDSearch.Common.CSearchResult searchresult = new AASDSearch.Common.CSearchResult();
+                    searchresult.Title = result.Title;
+                    searchresult.Type = Common.SearchResulttype.Web;
+                    searchresult.Description = result.Description;
+                    searchresult.ID = result.ID;
+                    searchresult.Url = result.Url;
+                    searchresult.DisplayUrl = result.DisplayUrl;
+                    pSearchrequest.SearchResults.Add(searchresult);
                 }
-                catch (Exception ex)
-                {
-                    string innerMessage =
-                        (ex.InnerException != null) ?
-                        ex.InnerException.Message : String.Empty;
-                    pSearchrequest.ErrorMsg = string.Format("{0}\n{1}", ex.Message, innerMessage);
-                }
-            });
+            }
+            catch (Exception ex)
+            {
+                string innerMessage =
+                    (ex.InnerException != null) ?
+                    ex.InnerException.Message : String.Empty;
+                pSearchrequest.ErrorMsg = string.Format("{0}\n{1}", ex.Message, innerMessage);
+            }
         }
     }      
 }

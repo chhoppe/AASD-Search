@@ -71,30 +71,27 @@ namespace AASDSearch.Common
         /// process a Searchrequest through all plugins in this manager
         /// </summary>
         /// <param name="pSearchRequest">Searchrequest to  process</param>
-        async public void processAsync(Common.CSearchRequest pSearchRequest)
+        public void process(Common.CSearchRequest pSearchRequest)
         {
-            await Task.Run(() =>
+            /// Error because the Manager should be locked before use
+            if (!_locked)
             {
-                /// Error because the Manager should be locked before use
-                if (!_locked)
+                pSearchRequest.GotError = true;
+                pSearchRequest.ErrorMsg = String.Format("PluginManager {0} not yet locked.", this.GetType().Name);
+            }
+            else // Manager is locked and rdy for use
+            {
+                // create handler
+                CPluginMngProcessHandler<T> handler = new CPluginMngProcessHandler<T>(pSearchRequest);
+                // create of plugin objects
+                foreach (Type plugin in _pluginList)
                 {
-                    pSearchRequest.GotError = true;
-                    pSearchRequest.ErrorMsg = String.Format("PluginManager {0} not yet locked.", this.GetType().Name);
+                    T pluginObj = (T)Activator.CreateInstance(plugin);
+                    handler.plugins.Add(pluginObj);
                 }
-                else // Manager is locked and rdy for use
-                {
-                    // create handler
-                    CPluginMngProcessHandler<T> handler = new CPluginMngProcessHandler<T>(pSearchRequest);
-                    // create of plugin objects
-                    foreach (Type plugin in _pluginList)
-                    {
-                        T pluginObj = (T)Activator.CreateInstance(plugin);
-                        handler.plugins.Add(pluginObj);
-                    }
-                    startprocess(handler); // to start each plugin process
-                    cleanupprocess(handler); // cleanup
-	            }
-            });
+                startprocess(handler); // to start each plugin process
+                cleanupprocess(handler); // cleanup
+	        }
         }
         /// <summary>
         /// start the process of each plugin
@@ -106,7 +103,7 @@ namespace AASDSearch.Common
         {
             foreach (T plugin in phandler.plugins)
             {
-                ((IPluginGeneralInfo)plugin).processAsync(phandler.request);     
+                ((IPluginGeneralInfo)plugin).process(phandler.request);     
             }
         }
         /// <summary>
