@@ -12,10 +12,15 @@ namespace AASDSearch.Search
         private const string AccountKey = "CHgarYrK/CZEsK2nS35YHXg1WnkJ9B2b7nqCNYRUmP8";
         public string Name
         {
-            get
-            {
-                return "Bing Search Engine";
-            }
+            get { return "Bing Search Engine"; }
+        }
+        public string Desc
+        {
+            get { return "This Search Pluigin uses the Bing API to get results "; }
+        }
+        public Version Version
+        {
+            get { return new Version(1, 0, 0, 0); }
         }
         public void process(AASDSearch.Common.CSearchRequest pSearchrequest)
         {

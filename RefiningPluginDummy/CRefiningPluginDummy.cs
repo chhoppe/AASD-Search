@@ -10,14 +10,19 @@ namespace AASDSearch.Refining
     {
         public string Name
         {
-            get
-            {
-                return "Refining Dummy";
-            }
+            get { return "Refining Dummy"; }
+        }
+        public string Desc
+        {
+            get { return "This Refining Pluigin does nothing, its just for testing porpuse "; }
+        }
+        public Version Version
+        {
+            get { return new Version(1, 0, 0, 0); }
         }
         public void process (AASDSearch.Common.CSearchRequest pSearchrequest)
         {
-            // Dummy Filter does nothing
+            // Dummy Refining does nothing
 
         }
     }

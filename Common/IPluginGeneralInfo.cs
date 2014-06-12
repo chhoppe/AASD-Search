@@ -12,6 +12,14 @@ namespace AASDSearch.Common
         {
             get;
         }
+        string Desc
+        {
+            get;
+        }
+        Version Version
+        {
+            get;
+        }
         void process (AASDSearch.Common.CSearchRequest pSearchrequest);
     }
 }

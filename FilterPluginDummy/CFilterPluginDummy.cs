@@ -12,11 +12,18 @@ namespace AASDSearch.Filter
         {
             get { return "Filter Dummy";}
         }
+        public string Desc
+        {
+            get { return "This Filter Pluigin does nothing, its just for testing porpuse "; }
+        }
+        public Version Version
+        {
+            get { return new Version(1,0,0,0); }
+        }
         public void process (AASDSearch.Common.CSearchRequest pSearchrequest)
         {
             // Dummy Filter does nothing
             
         }
-
     }
 }
