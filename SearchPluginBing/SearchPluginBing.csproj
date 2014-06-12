@@ -49,10 +49,6 @@
       <Project>{daaf3641-c6b7-48dc-adac-48877a400230}</Project>
       <Name>Common %28Business Layer\Common\Common%29</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SearchManager\SearchManager.csproj">
-      <Project>{b8a77d23-5c25-4c09-8360-d1b5e62b8f55}</Project>
-      <Name>SearchManager</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

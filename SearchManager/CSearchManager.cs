@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AASDSearch.Search
 {
-    public class CSearchManager : AASDSearch.Common.CPluginManagerBasis<ISearchPlugin>
+    public class CSearchManager : AASDSearch.Common.CPluginManagerBasis<AASDSearch.Common.ISearchPlugin>
     {
     }
 }

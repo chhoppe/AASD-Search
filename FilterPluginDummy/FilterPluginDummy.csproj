@@ -47,10 +47,6 @@
       <Project>{daaf3641-c6b7-48dc-adac-48877a400230}</Project>
       <Name>Common %28Business Layer\Common\Common%29</Name>
     </ProjectReference>
-    <ProjectReference Include="..\FilterManager\FilterManager.csproj">
-      <Project>{85709f7d-60d4-424e-9fc7-65dbe55f6599}</Project>
-      <Name>FilterManager</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

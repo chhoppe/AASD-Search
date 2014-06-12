@@ -7,7 +7,7 @@ using System.Net;
 
 namespace AASDSearch.Search
 {
-    public class CSearchPluginBing : ISearchPlugin
+    public class CSearchPluginBing : AASDSearch.Common.ISearchPlugin
     {
         private const string AccountKey = "CHgarYrK/CZEsK2nS35YHXg1WnkJ9B2b7nqCNYRUmP8";
         public string Name

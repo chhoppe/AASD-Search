@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AASDSearch.Refining
 {
-    public class CRefiningPluginDummy : AASDSearch.Refining.IRefiningPlugin
+    public class CRefiningPluginDummy : AASDSearch.Common.IRefiningPlugin
     {
         public string Name
         {

@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AASDSearch.Refining
+namespace AASDSearch.Common
 {
-    public interface IRefiningPlugin : AASDSearch.Common.IPluginGeneralInfo
+    public interface IFilterPlugin : AASDSearch.Common.IPluginGeneralInfo
     {
-  
+        
+
     }
 }

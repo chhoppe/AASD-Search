@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AASDSearch.Filter
 {
-    public class CFilterPluginDummy : IFilterPlugin
+    public class CFilterPluginDummy : AASDSearch.Common.IFilterPlugin
     {
         public string Name
         {

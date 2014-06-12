@@ -47,10 +47,6 @@
       <Project>{daaf3641-c6b7-48dc-adac-48877a400230}</Project>
       <Name>Common %28Business Layer\Common\Common%29</Name>
     </ProjectReference>
-    <ProjectReference Include="..\RefiningManager\RefiningManager.csproj">
-      <Project>{dc7ef35f-e700-4ad1-a410-6c78fe3d0837}</Project>
-      <Name>RefiningManager</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

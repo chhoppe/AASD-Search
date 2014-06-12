@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AASDSearch.Filter
+namespace AASDSearch.Common
 {
-    public interface IFilterPlugin : AASDSearch.Common.IPluginGeneralInfo
+    public interface ISearchPlugin : AASDSearch.Common.IPluginGeneralInfo
     {
         
 
