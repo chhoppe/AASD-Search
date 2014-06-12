@@ -37,7 +37,7 @@ namespace AASDSearch.Common
 
                     foreach (Type singletype in types)
                     {
-                        if (singletype is T)
+                        if (singletype.GetInterface(typeof(T).FullName ) != null)
                             registerPlugin(singletype);
                     }
                 }
@@ -119,5 +119,6 @@ namespace AASDSearch.Common
                 // cleanup stuff, for now let the GC do it
             }
         }
+
     }
 }
