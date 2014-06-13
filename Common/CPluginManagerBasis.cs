@@ -26,18 +26,17 @@ namespace AASDSearch.Common
             _pluginList = new List<Type>();
             
             // get list of all used assemblies
-            System.Reflection.Assembly[] assemblies = AppDomain.CurrentDomain.GetAssemblies();
+            System.Reflection.Assembly[] assemblies = AppDomain.CurrentDomain.GetAssemblies().Where(a => a.FullName.StartsWith("AASDSearch.")).ToArray(); ;
             
             foreach (System.Reflection.Assembly assembly in assemblies)
             {
                 if (!assembly.GlobalAssemblyCache && assembly.GetName().Name.Contains("Plugin"))
                 {
-                    //get list of types matching T namespace
-                    Type[] types = assembly.GetTypes().Where(type => String.Equals(type.Namespace, typeof(T).Namespace, StringComparison.Ordinal)).ToArray();
-
+                    //get list of types matching T namespace2
+                    Type[] types = assembly.GetTypes().Where(type => type.GetInterface(typeof(T).FullName) != null).ToArray();
+                    
                     foreach (Type singletype in types)
                     {
-                        if (singletype.GetInterface(typeof(T).FullName ) != null)
                             registerPlugin(singletype);
                     }
                 }
@@ -45,6 +44,15 @@ namespace AASDSearch.Common
             }
             _locked = true;
 
+        }
+
+        /// <summary>
+        /// Returns string describing the class object, mainly to see how many plugins are registerd in the debugger
+        /// </summary>
+        /// <returns>info string</returns>
+        public override string ToString()
+        {
+            return String.Format("Manager for {0} and has {1} Plugins registered.", typeof(T).Name, _pluginList.Count);
         }
 
         /// <summary>

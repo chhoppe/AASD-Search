@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>AASDSearch.Filter</RootNamespace>
-    <AssemblyName>FilterPluginDummy</AssemblyName>
+    <AssemblyName>AASDSearch.Filter.FilterPluginDummy</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

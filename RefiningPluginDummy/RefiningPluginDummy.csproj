@@ -7,8 +7,8 @@
     <ProjectGuid>{8CC88D02-3B11-4DE7-825C-0B0775681BC9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AASDSearch.Rifining</RootNamespace>
-    <AssemblyName>RifiningPluginDummy</AssemblyName>
+    <RootNamespace>AASDSearch.Refining</RootNamespace>
+    <AssemblyName>AASDSearch.Refining.RefiningPluginDummy</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

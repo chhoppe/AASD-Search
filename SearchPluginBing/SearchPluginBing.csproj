@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>AASDSearch.Search</RootNamespace>
-    <AssemblyName>SearchPluginBing</AssemblyName>
+    <AssemblyName>AASDSearch.Search.SearchPluginBing</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>AASDSearch.Filter</RootNamespace>
-    <AssemblyName>FilterManager</AssemblyName>
+    <AssemblyName>AASDSearch.Filter.FilterManager</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
