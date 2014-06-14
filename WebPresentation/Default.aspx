@@ -23,6 +23,7 @@
                     <asp:TextBox ID="TextBoxSearch" runat="server" Height="30px" Width="639px"></asp:TextBox>
                     <asp:Button ID="ButtonSearch" runat="server" Font-Bold="True" Font-Names="Georgia"
                         Height="30px" Text="Search" Width="65px" onclick="ButtonSearch_Click" />
+
                 </td>
             </tr>
             <tr>
@@ -33,8 +34,10 @@
             <tr>
                 <td style="border-color: #999999">&nbsp;</td>
                 <td style="border-color: #999999">
+
+        
                     <asp:GridView ID="GridViewSearchResult" runat="server"
-                        AutoGenerateColumns="false" ShowHeader="false" Width="712px"
+                        AutoGenerateColumns="true" ShowHeader="false" Width="712px"
                         BorderColor="White">
                     <Columns>
                     <asp:TemplateField>
