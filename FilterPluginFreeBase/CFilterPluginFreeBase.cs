@@ -23,6 +23,7 @@ namespace AASDSearch.Filter
         public void process(AASDSearch.Common.CSearchRequest pSearchrequest)
         {
             //  Filter functionallity does nothing
+            Freebase4net.MqlReadService mql = new Freebase4net.MqlReadService("");
 
         }
     }
