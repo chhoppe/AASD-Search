@@ -351,6 +351,10 @@
       <Project>{5cc5cb52-0a9e-434d-befe-bb6feed8acd1}</Project>
       <Name>FilterPluginDummy</Name>
     </ProjectReference>
+    <ProjectReference Include="..\FilterPluginFreeBase\FilterPluginFreeBase.csproj">
+      <Project>{fad6061b-de03-49c0-aa64-af99e9285875}</Project>
+      <Name>FilterPluginFreeBase</Name>
+    </ProjectReference>
     <ProjectReference Include="..\RefiningManager\RefiningManager.csproj">
       <Project>{dc7ef35f-e700-4ad1-a410-6c78fe3d0837}</Project>
       <Name>RefiningManager</Name>
