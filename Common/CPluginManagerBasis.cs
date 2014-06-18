@@ -99,7 +99,7 @@ namespace AASDSearch.Common
                 }
                 startprocess(handler); // to start each plugin process
                 cleanupprocess(handler); // cleanup
-	        }
+            }
         }
         /// <summary>
         /// start the process of each plugin
