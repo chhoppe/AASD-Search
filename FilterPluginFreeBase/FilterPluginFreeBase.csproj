@@ -7,8 +7,8 @@
     <ProjectGuid>{FAD6061B-DE03-49C0-AA64-AF99E9285875}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FilterPluginFreeBase</RootNamespace>
-    <AssemblyName>FilterPluginFreeBase</AssemblyName>
+    <RootNamespace>AASDSearch.Filter</RootNamespace>
+    <AssemblyName>AASDSearch.Filter.FilterPluginFreeBase</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
