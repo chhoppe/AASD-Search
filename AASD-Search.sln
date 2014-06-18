@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefiningManager", "Refining
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefiningPluginDummy", "RefiningPluginDummy\RefiningPluginDummy.csproj", "{8CC88D02-3B11-4DE7-825C-0B0775681BC9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilterPluginFreeBase", "FilterPluginFreeBase\FilterPluginFreeBase.csproj", "{FAD6061B-DE03-49C0-AA64-AF99E9285875}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{8CC88D02-3B11-4DE7-825C-0B0775681BC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8CC88D02-3B11-4DE7-825C-0B0775681BC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8CC88D02-3B11-4DE7-825C-0B0775681BC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAD6061B-DE03-49C0-AA64-AF99E9285875}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAD6061B-DE03-49C0-AA64-AF99E9285875}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAD6061B-DE03-49C0-AA64-AF99E9285875}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAD6061B-DE03-49C0-AA64-AF99E9285875}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -86,5 +92,6 @@ Global
 		{40601843-5813-4306-98C9-64967520CB55} = {AE5C920C-3C0A-461C-B551-DC59D1F498A5}
 		{85709F7D-60D4-424E-9FC7-65DBE55F6599} = {CD644F2B-C6D1-4818-B4B8-39D79F910F81}
 		{5CC5CB52-0A9E-434D-BEFE-BB6FEED8ACD1} = {CD644F2B-C6D1-4818-B4B8-39D79F910F81}
+		{FAD6061B-DE03-49C0-AA64-AF99E9285875} = {CD644F2B-C6D1-4818-B4B8-39D79F910F81}
 	EndGlobalSection
 EndGlobal
