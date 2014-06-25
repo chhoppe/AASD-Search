@@ -24,6 +24,7 @@ namespace AASDSearch.Filter
         {
             //  Filter functionallity does nothing
             Freebase4net.MqlReadService mql = new Freebase4net.MqlReadService("");
+            
 
         }
     }

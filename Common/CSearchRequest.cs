@@ -16,6 +16,7 @@ namespace AASDSearch.Common
         protected bool _gotError;
         protected string _errorMsg;
         protected Guid _UserID;
+        protected SearchResultType _searchtype;
         protected List<CSearchResult> _searchResults;
 
         /// <summary>
@@ -68,6 +69,19 @@ namespace AASDSearch.Common
             {
                 _language = value;
                 OnPropertyChanged("Language");
+            }
+        }
+        /// <summary>
+        /// the Searchtype of the search (Web, Image, Video)
+        /// </summary>
+        public SearchResultType Searchtype
+        {
+            get { return _searchtype; }
+
+            set
+            {
+                _searchtype = value;
+                OnPropertyChanged("Searchtype");
             }
         }
         /// <summary>
@@ -125,6 +139,7 @@ namespace AASDSearch.Common
         {
             _language = "en-us";
             _searchString = "";
+            _searchtype = SearchResultType.Web;
             if (_searchResults == null)
                 _searchResults = new List<CSearchResult>();
             else

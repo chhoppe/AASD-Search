@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AASDSearch.Common
 {
-    public enum SearchResulttype
+    public enum SearchResultType
     {
         None = 0,
         Web,
@@ -28,7 +28,7 @@ namespace AASDSearch.Common
     {
         public Guid ID { get; set; }
         public String Title { get; set; }
-        public SearchResulttype Type { get; set; }
+        public SearchResultType Type { get; set; }
         public String Description { get; set; }
         public String DisplayUrl { get; set; }
         public String Url { get; set; }

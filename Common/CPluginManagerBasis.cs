@@ -32,7 +32,7 @@ namespace AASDSearch.Common
             {
                 if (!assembly.GlobalAssemblyCache && assembly.GetName().Name.Contains("Plugin"))
                 {
-                    //get list of types matching T namespace2
+                    
                     Type[] types = assembly.GetTypes().Where(type => type.GetInterface(typeof(T).FullName) != null).ToArray();
                     
                     foreach (Type singletype in types)

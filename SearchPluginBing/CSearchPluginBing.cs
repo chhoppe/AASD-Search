@@ -50,7 +50,7 @@ namespace AASDSearch.Search
                 {
                     AASDSearch.Common.CSearchResult searchresult = new AASDSearch.Common.CSearchResult();
                     searchresult.Title = result.Title;
-                    searchresult.Type = Common.SearchResulttype.Web;
+                    searchresult.Type = Common.SearchResultType.Web;
                     searchresult.Description = result.Description;
                     searchresult.ID = result.ID;
                     searchresult.Url = result.Url;
